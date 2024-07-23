@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Rex Adventure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/dino.png') }}" alt="Dino" class="dino-image">
+        <h1>Gesture Rex Adventure</h1>
+        <div class="buttons-container">
+            <div class="button-wrapper">
+                <a href="{{ url_for('game1') }}" class="button">Pixeländerungen</a>
+                <p>Hier wird ein Algorithmus verwendet, der auf Pixeländerungen reagiert. Wird ein bestimmter Schwellenwert überschritten, wird ein Sprung ausgeführt.</p>
+            </div>
+            <div class="button-wrapper">
+                <a href="{{ url_for('game2') }}" class="button">MediaPipe</a>
+                <p>Hier wird das MediaPipe-Modell von Google verwendet. Wird eine Öffnung der Hand erkannt, wird ein Sprung ausgeführt.</p>
+            </div>
+            <div class="button-wrapper">
+                <a href="{{ url_for('game3') }}" class="button">eigenes Modell</a>
+                <p>Hier wird ein CNN verwendet, das mit einem eigens erstellten Datensatz trainiert wurde. Wird eine Öffnung der Hand erkannt, wird ein Sprung ausgeführt.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

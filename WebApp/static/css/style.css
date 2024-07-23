@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.dino-image {
+    width: 300px; /* Breite des Bildes erhöhen */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.button-wrapper {
+    text-align: center;
+    max-width: 300px; /* maximale Breite für jeden Button und Text */
+    flex: 1;
+    margin: 0 20px; /* Abstand zwischen den Button-Wrappers */
+}
+
+.button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    background-color: #9966cc; /* lila Farbe */
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: #9966cc; /* dunkleres lila beim Hover */
+}
+
+p {
+    word-wrap: break-word; /* bricht den Text, wenn er zu lang wird */
+    font-size: 1.2em;
+    margin-top: 20px; /* Abstand über dem Text */
+    margin-bottom: 0; /* keinen Abstand unter dem Text */
+}
+
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 600px;
+    border: 2px solid #ccc;
+    padding: 0;
+    background-color: #fff;
+    margin-bottom: 20px; /* Abstand unter dem Spiel */
+}
+
+.game-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Entfernt die Rahmenlinie des iFrame */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-container .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #9966cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-container .button:hover {
+    background-color: #9966cc;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-size: 24px;
+}
+
+.loading-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="overlay" id="loading-overlay">
+        <p id="loading-text">Loading...</p>
+    </div>
+    <div class="game-wrapper">
+        <div class="game-container" id="game-container">
+            <iframe src="https://chromedino.com/" id="dino-game" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('stop') }}" class="button">Zurück zur Startseite</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/dino.js') }}"></script>
+</body>
+</html>
