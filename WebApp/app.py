@@ -1,16 +1,20 @@
-print("importing (1 of 7) modules...")
+"pip install flask opencv-python-headless pyautogui numpy mediapipe tensorflow"
+
+print("importing (1 of 8) modules...")
 from flask import Flask, render_template, redirect, url_for
-print("importing (2 of 7) modules...")
+print("importing (2 of 8) modules...")
 import threading
-print("importing (3 of 7) modules...")
+print("importing (3 of 8) modules...")
 import cv2
-print("importing (4 of 7) modules...")
+print("importing (4 of 8) modules...")
 import pyautogui
-print("importing (5 of 7) modules...")
+print("importing (5 of 8) modules...")
 import numpy as np
-print("importing (6 of 7) modules...")
+print("importing (6 of 8) modules...")
 import mediapipe as mp
-print("importing (7 of 7) modules...")
+print("importing (7 of 8) modules...")
+import time
+print("importing (8 of 8) modules...")
 import tensorflow as tf
 print("Starting WebApp...")
 app = Flask(__name__)
@@ -23,6 +27,8 @@ def algorithm1(stop_event):
     cap = cv2.VideoCapture(0)
     previous_frame = None
     jump_threshold = 50000
+    last_jump_time = 0  # Variable, um die Zeit des letzten Sprungs zu speichern
+    jump_cooldown = 0.5  # Wartezeit in Sekunden zwischen zwei Sprüngen
 
     def detect_jump(frame, previous_frame):
         diff = cv2.absdiff(previous_frame, frame)
@@ -40,9 +46,11 @@ def algorithm1(stop_event):
         gray = cv2.GaussianBlur(gray, (5, 5), 0)
 
         if previous_frame is not None:
-            if detect_jump(gray, previous_frame):
+            current_time = time.time()
+            if detect_jump(gray, previous_frame) and (current_time - last_jump_time > jump_cooldown):
                 print("Jump detected!")
                 pyautogui.press('space')
+                last_jump_time = current_time  # Aktualisiere die Zeit des letzten Sprungs
 
         previous_frame = gray
         cv2.imshow('Frame', frame)
