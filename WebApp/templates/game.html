@@ -1,9 +1,12 @@
+<!--Dieses Template bildet die Grundlage für alle drei Seiten der Spiele für jeweils die drei unterschiedlichen Algorithmen-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dino Game</title>
+    <!-- Hier wird die css Datei mit den Designelementen geladen-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
@@ -12,12 +15,14 @@
     </div>
     <div class="game-wrapper">
         <div class="game-container" id="game-container">
+            <!--Hier wird das Dinospiel von chromedino.com eingebettet-->
             <iframe src="https://chromedino.com/" id="dino-game" frameborder="0" scrolling="no"></iframe>
         </div>
         <div class="button-container">
             <a href="{{ url_for('stop') }}" class="button">Zurück zur Startseite</a>
         </div>
     </div>
+    <!-- Hier wird die JavaScript-Datei mit der Ladeanzeige geladen-->
     <script src="{{ url_for('static', filename='js/dino.js') }}"></script>
 </body>
 </html>

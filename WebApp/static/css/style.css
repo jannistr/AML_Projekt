@@ -14,7 +14,7 @@ body {
 }
 
 .dino-image {
-    width: 300px; /* Breite des Bildes erhöhen */
+    width: 300px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -32,9 +32,9 @@ h1 {
 
 .button-wrapper {
     text-align: center;
-    max-width: 300px; /* maximale Breite für jeden Button und Text */
+    max-width: 300px;
     flex: 1;
-    margin: 0 20px; /* Abstand zwischen den Button-Wrappers */
+    margin: 0 20px;
 }
 
 .button {
@@ -42,21 +42,21 @@ h1 {
     margin: 10px 0;
     padding: 20px 40px;
     font-size: 1.5em;
-    background-color: #9966cc; /* lila Farbe */
+    background-color: #9966cc;
     color: white;
     text-decoration: none;
     border-radius: 10px;
 }
 
 .button:hover {
-    background-color: #9966cc; /* dunkleres lila beim Hover */
+    background-color: #9966cc;
 }
 
 p {
-    word-wrap: break-word; /* bricht den Text, wenn er zu lang wird */
+    word-wrap: break-word;
     font-size: 1.2em;
-    margin-top: 20px; /* Abstand über dem Text */
-    margin-bottom: 0; /* keinen Abstand unter dem Text */
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 
 .game-wrapper {
@@ -77,13 +77,13 @@ p {
     border: 2px solid #ccc;
     padding: 0;
     background-color: #fff;
-    margin-bottom: 20px; /* Abstand unter dem Spiel */
+    margin-bottom: 20px;
 }
 
 .game-container iframe {
     width: 100%;
     height: 100%;
-    border: none; /* Entfernt die Rahmenlinie des iFrame */
+    border: none;
 }
 
 .button-container {

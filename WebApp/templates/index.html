@@ -1,24 +1,30 @@
+<!--Dieses Template bildet die Grundlage für die Startseite-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gesture Rex Adventure</title>
+    <!-- Hier wird die css Datei mit den Designelementen geladen-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="container">
+        <!-- Laden des Dinobildes für die Startseite-->
         <img src="{{ url_for('static', filename='images/dino.png') }}" alt="Dino" class="dino-image">
-        <h1>Gesture Rex Adventure</h1>
+        <h1>Gesture Rex Adventure</h1>        
         <div class="buttons-container">
+            <!--Der Button für den ersten Algorithmus-->
             <div class="button-wrapper">
                 <a href="{{ url_for('game1') }}" class="button">Pixeländerungen</a>
                 <p>Hier wird ein Algorithmus verwendet, der auf Pixeländerungen reagiert. Wird ein bestimmter Schwellenwert überschritten, wird ein Sprung ausgeführt.</p>
             </div>
+            <!--Der Button für den zweiten Algorithmus-->
             <div class="button-wrapper">
                 <a href="{{ url_for('game2') }}" class="button">MediaPipe</a>
                 <p>Hier wird das MediaPipe-Modell von Google verwendet. Wird eine Öffnung der Hand erkannt, wird ein Sprung ausgeführt.</p>
             </div>
+            <!--Der Button für den dritten Algorithmus-->
             <div class="button-wrapper">
                 <a href="{{ url_for('game3') }}" class="button">eigenes Modell</a>
                 <p>Hier wird ein CNN verwendet, das mit einem eigens erstellten Datensatz trainiert wurde. Wird eine Öffnung der Hand erkannt, wird ein Sprung ausgeführt.</p>
