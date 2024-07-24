@@ -20,5 +20,5 @@ Starten der WebApp:
 
 Ein Demo-Video zur Verwendung der WebApp ist sowohl in der Präsentation, als auch im Abgabeordner enthalten.
 
-Außerdem befindet sich im Abgabeordner neben dem Ordner "WebApp" auch noch eine Datei "Modelltraining.jpyn".
+Außerdem befindet sich im Abgabeordner neben dem Ordner "WebApp" auch noch eine Datei "Modelltraining.py".
 Diese enhält den Code, der zum Training des eigenen Modells (Variante 3) verwendet wurde.
